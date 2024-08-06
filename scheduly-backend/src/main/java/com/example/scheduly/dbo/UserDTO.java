@@ -1,37 +1,15 @@
-package com.example.scheduly.entity;
-
-import jakarta.persistence.*;
-
-import java.util.Objects;
+package com.example.scheduly.dbo;
 import java.util.UUID;
 
-@Entity
-@Table(name = "t_USER")
-public class UserEntity {
-    /* Class Atributes */
-    @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+public class UserDTO {
+
     private UUID _id;
-
-    @Column (nullable = false)
     private String _name;
-
-    @Column (nullable = false)
     private String _photo;
-
-    @Column (nullable = false)
     private String _email;
-
-    @Column (nullable = false)
     private String _phone;
-
-    @Column (nullable = false, unique = true)
     private String _login;
-
-    @Column (nullable = false)
     private String _pwd;
-
-    /* Getter and Setters */
 
     public UUID get_id() {
         return _id;
@@ -88,21 +66,4 @@ public class UserEntity {
     public void set_pwd(String _pwd) {
         this._pwd = _pwd;
     }
-
-
-    //* HASHCODE AND EQUAL METHODS */
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        UserEntity that = (UserEntity) o;
-        return Objects.equals(_id, that._id);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hashCode(_id);
-    }
 }
-
