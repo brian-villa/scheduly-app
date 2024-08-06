@@ -1,6 +1,8 @@
 package com.example.scheduly.entity;
 
+import com.example.scheduly.dbo.UserDTO;
 import jakarta.persistence.*;
+import org.springframework.beans.BeanUtils;
 
 import java.util.Objects;
 import java.util.UUID;
@@ -30,6 +32,14 @@ public class UserEntity {
 
     @Column (nullable = false)
     private String _pwd;
+
+    public UserEntity(UserDTO user) {
+        BeanUtils.copyProperties(user, this);
+    }
+
+    public UserEntity () {
+
+    }
 
     /* Getter and Setters */
 

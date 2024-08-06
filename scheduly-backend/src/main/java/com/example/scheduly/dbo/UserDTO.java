@@ -1,7 +1,18 @@
 package com.example.scheduly.dbo;
+import com.example.scheduly.entity.UserEntity;
+import org.springframework.beans.BeanUtils;
+
 import java.util.UUID;
 
 public class UserDTO {
+
+    public UserDTO(UserEntity user) {
+        BeanUtils.copyProperties(user, this);
+    }
+
+    public UserDTO () {
+
+    }
 
     private UUID _id;
     private String _name;
