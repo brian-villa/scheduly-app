@@ -5,6 +5,13 @@ import org.springframework.beans.BeanUtils;
 import java.util.UUID;
 
 public class UserDTO {
+    private UUID id;
+    private String name;
+    private String photo;
+    private String email;
+    private String phone;
+    private String login;
+    private String pwd;
 
     public UserDTO(UserEntity user) {
         BeanUtils.copyProperties(user, this);
@@ -14,67 +21,59 @@ public class UserDTO {
 
     }
 
-    private UUID _id;
-    private String _name;
-    private String _photo;
-    private String _email;
-    private String _phone;
-    private String _login;
-    private String _pwd;
-
-    public UUID get_id() {
-        return _id;
+    public UUID getId() {
+        return id;
     }
 
-    public void set_id(UUID _id) {
-        this._id = _id;
+    public void setId(UUID id) {
+        this.id = id;
     }
 
-    public String get_name() {
-        return _name;
+    public String getName() {
+        return name;
     }
 
-    public void set_name(String _name) {
-        this._name = _name;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String get_photo() {
-        return _photo;
+    public String getPhoto() {
+        return photo;
     }
 
-    public void set_photo(String _photo) {
-        this._photo = _photo;
+    public void setPhoto(String photo) {
+        this.photo = photo;
     }
 
-    public String get_email() {
-        return _email;
+    public String getEmail() {
+        return email;
     }
 
-    public void set_email(String _email) {
-        this._email = _email;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String get_phone() {
-        return _phone;
+    public String getPhone() {
+        return phone;
     }
 
-    public void set_phone(String _phone) {
-        this._phone = _phone;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    public String get_login() {
-        return _login;
+    public String getLogin() {
+        return login;
     }
 
-    public void set_login(String _login) {
-        this._login = _login;
+    public void setLogin(String login) {
+        this.login = login;
     }
 
-    public String get_pwd() {
-        return _pwd;
+    public String getPwd() {
+        return pwd;
     }
 
-    public void set_pwd(String _pwd) {
-        this._pwd = _pwd;
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
     }
 }

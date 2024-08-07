@@ -2,7 +2,6 @@ package com.example.scheduly.service;
 import com.example.scheduly.dbo.UserDTO;
 import com.example.scheduly.entity.UserEntity;
 import com.example.scheduly.repository.UserRepository;
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -30,13 +29,13 @@ public class UserService {
         return new UserDTO(userRepository.save(userEntity));
     }
 
-    public void delete(UUID _id) {
-        UserEntity userEntity = userRepository.findById(_id).get();
+    public void delete(UUID id) {
+        UserEntity userEntity = userRepository.findById(id).get();
 
         userRepository.delete(userEntity);
     }
 
-    public UserDTO findById(UUID _id) {
-        return new UserDTO(userRepository.findById(_id).get());
+    public UserDTO findById(UUID id) {
+        return new UserDTO(userRepository.findById(id).get());
     }
 }
