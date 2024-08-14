@@ -27,6 +27,7 @@ public class UserEntity {
     @Column (nullable = false)
     private String phone;
 
+
     @Column (nullable = false, unique = true)
     private String login;
 
