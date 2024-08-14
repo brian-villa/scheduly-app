@@ -2,10 +2,9 @@ package com.example.scheduly.dbo;
 
 import com.example.scheduly.entity.BarberShopEntity;
 import jakarta.persistence.ElementCollection;
-import jakarta.persistence.Embeddable;
 import org.springframework.beans.BeanUtils;
 
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -79,13 +78,13 @@ class Andress {
     }
 }
 
-class Geo {
+/** class Geo {
     private String type;
 
     @ElementCollection
     private List<String> coordinate;
 
-    /*getters and setters */
+    /*getters and setters
 
     public String getType() {
         return type;
@@ -111,7 +110,7 @@ class Geo {
     }
 
 
-}
+} */
 
 public class BarberShopDTO {
     private UUID id;
@@ -120,7 +119,7 @@ public class BarberShopDTO {
     private String email;
     private String phone;
     private Andress andress;
-    private Geo geo;
+    //private Geo geo;
     private Date dateCreated;
 
     public BarberShopDTO() {}
@@ -176,13 +175,13 @@ public class BarberShopDTO {
         this.andress = andress;
     }
 
-    public Geo getGeo() {
+    /* public Geo getGeo() {
         return geo;
     }
 
     public void setGeo(Geo geo) {
         this.geo = geo;
-    }
+    } */
 
     public Date getDateCreated() {
         return dateCreated;
