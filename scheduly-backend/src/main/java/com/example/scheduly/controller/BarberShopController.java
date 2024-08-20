@@ -1,7 +1,6 @@
 package com.example.scheduly.controller;
 
 import com.example.scheduly.dbo.BarberShopDTO;
-import com.example.scheduly.dbo.UserDTO;
 import com.example.scheduly.service.BarberShopService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
